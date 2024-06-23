@@ -115,8 +115,8 @@ test("iterable", async () => {
 
 	const allItems: number[] = [];
 
-	for await (const chunk of iterable) {
-		allItems.push(...chunk.items);
+	for await (const response of iterable) {
+		allItems.push(...response.items);
 	}
 
 	assert.strictEqual(allItems.length, total);
